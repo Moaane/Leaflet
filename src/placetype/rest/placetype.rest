@@ -1,20 +1,18 @@
-GET http://localhost:3000/placetype
+GET http://localhost:3212/placetype
 
 ###
-GET http://localhost:3000/placetype/
+GET http://localhost:3212/placetype/
 
 ###
-POST http://localhost:3000/placetype
+POST http://localhost:3212/placetype
 Content-Type: application/json
 
 {
-    "username": "Petir",
-    "email": "petir@gmail.com",
-    "religionId": "9687a322-c6b9-4ea5-9ff7-b7cbc543d1b3"
+    "typeName" : "mini market"
 }
 
 ###
-PUT  http://localhost:3000/placetype/
+PUT  http://localhost:3212/placetype/
 Content-Type: application/json
 
 {
@@ -22,4 +20,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/placetype/
+DELETE http://localhost:3212/placetype/

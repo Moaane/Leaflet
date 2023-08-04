@@ -1,0 +1,31 @@
+GET http://localhost:3212/place
+
+###
+GET http://localhost:3212/place/
+
+###
+POST http://localhost:3212/place
+Content-Type: application/json
+
+{
+    "name" : "BTM",
+    "description" : "Bigest mall in the wordl",
+    "latitude" : "-6.6052181",
+    "longitude" : "106.7954716",
+    "type_placeId" : "7fe465a9-6857-4944-b97b-dbdc75d4272a"
+}
+
+###
+PUT  http://localhost:3212/place/a6ed0a98-ba5c-4903-9f0f-33bb44a80cf4
+Content-Type: application/json
+
+{
+   "name" : "Alfamart",
+    "description" : "Bigest mini market of the year",
+    "latitude" : "-6.6052181",
+    "longitude" : "106.7954716",
+    "type_placeId" : "c09a3767-3024-4305-af8f-fb519e08efcc"
+}
+
+###
+DELETE http://localhost:3212/place/a6ed0a98-ba5c-4903-9f0f-33bb44a80cf4
