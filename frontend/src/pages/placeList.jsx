@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 
-const placeList = () => {
+const PlaceList = () => {
     const [place, setPlace] = useState([])
 
     const fetchData = async () => {
-        const response = await axios.get(`http://localhost:4321/place`)
-        placeList(response.data)
+        const response = await axios.get(`http://192.168.18.210:4321/place`)
+        setPlace(response.data)
     }
-
 
     useEffect(() => {
         fetchData()
@@ -17,7 +16,7 @@ const placeList = () => {
     },[])
 
   return (
-    <table class="table">
+    <table className="table">
     <thead>
       <tr>
         <th scope="col">nomor</th>
@@ -44,4 +43,4 @@ const placeList = () => {
   )
 }
 
-export default placeList
+export default PlaceList

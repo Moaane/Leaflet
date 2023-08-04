@@ -1,4 +1,4 @@
-GET http://localhost:4321/place
+GET http://192.168.18.210:4321/place
 
 ###
 GET http://localhost:4321/place/fad136a6-0543-4932-b298-02cc3334beb4
