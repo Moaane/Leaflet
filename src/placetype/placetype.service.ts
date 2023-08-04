@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
 import { type_place } from '@prisma/client';
+import { PrismaService } from 'src/prisma/prisma.service';
+
 
 @Injectable()
 export class PlacetypeService {
@@ -14,8 +15,8 @@ export class PlacetypeService {
         return this.prismaService.type_place.findFirst({ where: { id } })
     }
 
-    async createData(data: { nameType: string }): Promise<type_place> {
-        return this.prismaService.type_place.create({ dataa })
+    async createData(data: { typeName: string }): Promise<type_place> {
+        return this.prismaService.type_place.create({ data })
     }
 
 

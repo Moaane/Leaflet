@@ -27,4 +27,12 @@ export class PlaceService {
         })
     }
 
+    async deleteData(id : string): Promise<place>{
+        return this.prismaService.place.delete({
+            where :{
+                id
+            }
+        })
+    }
+
     }
