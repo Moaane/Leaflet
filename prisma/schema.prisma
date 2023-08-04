@@ -10,6 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Place {
-  id String @id @default(uuid())
+model type_place {
+  id       String @id @default(uuid())
+  typeName String
 }
