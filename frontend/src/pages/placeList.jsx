@@ -4,27 +4,33 @@ import axios from 'axios'
 
 const PlaceList = () => {
     const [place, setPlace] = useState([])
+    const [type, setType] = useState([])
 
     const fetchData = async () => {
         const response = await axios.get(`http://192.168.18.210:4321/place`)
         setPlace(response.data)
     }
 
+    const datafetch = async () => {
+        const response = await axios.get(`http://192.168.18.210:4321/placetype`)
+        setType(response.data)
+    }
+
     useEffect(() => {
         fetchData()
-        
+        datafetch()
     },[])
 
   return (
     <table className="table">
     <thead>
       <tr>
-        <th scope="col">nomor</th>
-        <th scope="col">nama produk</th>
-        <th scope="col">UserId</th>
-        <th scope="col">harga</th>
-        <th scope="col">expire</th>
-        <th scope="col">created time</th>
+        <th scope="col">number</th>
+        <th scope="col">Place Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">latitude</th>
+        <th scope="col">longitude</th>
+        <th scope="col">type place</th>
       </tr>
     </thead>
     <tbody>
@@ -35,7 +41,7 @@ const PlaceList = () => {
             <td>{item.description}</td>
             <td>{item.latitude}</td>
             <td>{item.longitude}</td>
-            <td>{item.type_placeId}</td>
+            <td>{item.typeName}</td>
         </tr>
       ))}
     </tbody>
