@@ -3,7 +3,7 @@ import { PlacetypeController } from './placetype.controller';
 import { PlacetypeService } from './placetype.service';
 
 @Module({
-  controllers: [PlacetypeController],
+  controllers: [PlacetypeController, ],
   providers: [PlacetypeService]
 })
 export class PlacetypeModule {}
