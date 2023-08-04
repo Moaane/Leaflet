@@ -14,9 +14,19 @@ export class PlacetypeService {
         return this.prismaService.type_place.findFirst({ where: { id } })
     }
 
-    async createData(data: { nameType: string }): Promise<type_place> {
-        return this.prismaService.type_place.create({ dataa })
+    async createData(data: { typeName: string }): Promise<type_place> {
+        return this.prismaService.type_place.create({ data })
     }
 
+    async updateData(id: string, data: { typeName: string }): Promise<type_place> {
+        return this.prismaService.type_place.update({
+            where: { id },
+            data
+        })
+    }
+
+    async deleteData(id: string): Promise<type_place> {
+        return this.prismaService.type_place.delete({ where: { id } })
+    }
 
 }
