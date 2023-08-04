@@ -15,7 +15,7 @@ export class PlacetypeService {
     }
 
     async createData(data: { nameType: string }): Promise<type_place> {
-        return this.prismaService.type_place.create({ data })
+        return this.prismaService.type_place.create({ dataa })
     }
 
 
