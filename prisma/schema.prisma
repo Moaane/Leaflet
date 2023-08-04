@@ -13,4 +13,17 @@ datasource db {
 model type_place {
   id       String @id @default(uuid())
   typeName String
+
+  place place[]
+}
+
+model place {
+  id          String @id @default(uuid())
+  name        String
+  description String
+
+  latitude     String
+  longitude    String
+  type_place   type_place? @relation(fields: [type_placeId], references: [id])
+  type_placeId String?
 }
