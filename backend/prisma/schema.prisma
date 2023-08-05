@@ -12,7 +12,7 @@ datasource db {
 
 model place_type {
   id       String @id @default(uuid())
-  nameType String
+  nameType String @unique
 
   place place[]
 }
